@@ -10,17 +10,13 @@ This tutorial will show you how to convert .ova and .vmdk to qcow2. While workin
 
 [Tutorial](./Hacking-Tutorials/How-to-convert-ova-and-vmdk-to-qcow2.md).
 
-### Title
+### **How to setup Kali on VirutalBox as a VM**
 
-paragraph about this subject
+Alot of people wanna learn how to setup Kali in a VM so they can get their learning going so here is a tutorial to do just that help you set it up Kali in VirtualBox. Plus I added some of the error I have encounted repetitive overtime while helping other setting up their Kali machine in thier computer. This Tutorial is mainly toward Windows computers.
 
-[Setup kali on VirtualBox](./Hacking-Tutorials/VirtualBox_setup_with_kali.md).
+[Tutorial](./Hacking-Tutorials/VirtualBox_setup_with_kali.md).
 
-another paragraph
 
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 # Header 1
 
