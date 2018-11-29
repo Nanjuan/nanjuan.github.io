@@ -4,19 +4,17 @@ layout: default
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
-### **Converting ova and vmdk to qcow2**
+### **Converting ova and vmdk to qcow2** [Tutorial](./Hacking-Tutorials/How-to-convert-ova-and-vmdk-to-qcow2.md).
 
 This tutorial will show you how to convert .ova and .vmdk to qcow2. While working with a client I came alone this issue that we build a enviroment in VMware because they where going to deplay it in EXSI but last minute they change to antsle and AWS enviroment and when they imported the .ova or .vmdk they where having right only vms which cause a issue. So I gatther all the info I needed to convert this VMs before importing them to the Antsle boxes and I decided to create this tutorial since is a way that work for me. 
 
 [Tutorial](./Hacking-Tutorials/How-to-convert-ova-and-vmdk-to-qcow2.md).
 
-### **How to setup Kali on VirutalBox as a VM**
+### **How to setup Kali on VirutalBox as a VM** [Tutorial](./Hacking-Tutorials/VirtualBox_setup_with_kali.md).
 
 Alot of people wanna learn how to setup Kali in a VM so they can get their learning going so here is a tutorial to do just that help you set it up Kali in VirtualBox. Plus I added some of the error I have encounted repetitive overtime while helping other setting up their Kali machine in thier computer. This Tutorial is mainly toward Windows computers.
 
 [Tutorial](./Hacking-Tutorials/VirtualBox_setup_with_kali.md).
-
-
 
 # Header 1
 
