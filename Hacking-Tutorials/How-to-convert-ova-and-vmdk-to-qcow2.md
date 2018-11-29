@@ -21,6 +21,7 @@ Author: N̷̘̩̠͙̬̫̉͑̉͘͜ą̶͓̳͍̙̻̱̎̓̄̈́́́̈̒̀̐͘̕͝͝n�
 
 ## Prerequisites <a id="preinfo"></a>
 1. Have a [Virtual Machine](https://github.com/Nanjuan/Hacking-Tools-Virtualization-Tutorials/blob/master/VirtualBox_setup_with_kali.md) install
+2. Have [Kali install](https://github.com/Nanjuan/Hacking-Tools-Virtualization-Tutorials/blob/master/VirtualBox_setup_with_kali.md)
 
 
 ## Summary <a id="Summary"></a> 
