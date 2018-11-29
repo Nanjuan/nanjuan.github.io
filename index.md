@@ -4,13 +4,11 @@ layout: default
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
-### Title
+### **Converting ova and vmdk to qcow2**
 
-Paragraph about this subject
+This tutorial will show you how to convert .ova and .vmdk to qcow2. While working with a client I came alone this issue that we build a enviroment in VMware because they where going to deplay it in EXSI but last minute they change to antsle and AWS enviroment and when they imported the .ova or .vmdk they where having right only vms which cause a issue. So I gatther all the info I needed to convert this VMs before importing them to the Antsle boxes and I decided to create this tutorial since is a way that work for me. 
 
-[Convert ova and vmdk VM to qcow2 VM](./Hacking-Tutorials/How-to-convert-ova-and-vmdk-to-qcow2.md).
-
-another pregraph test
+[Tutorial](./Hacking-Tutorials/How-to-convert-ova-and-vmdk-to-qcow2.md).
 
 ### Title
 
