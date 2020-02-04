@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-
+<!--
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+-->
 
 ### **Converting ova and vmdk to qcow2** [Tutorial](./Hacking-Tutorials/How-to-convert-ova-and-vmdk-to-qcow2.md).
 
