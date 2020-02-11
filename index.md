@@ -17,7 +17,7 @@ Alot of people wanna learn how to setup Kali in a VM so they can get their learn
 
 This Tutorials will show you what you need to buy and how-to setup your pwnogotchi. Also, what to do when you grab your Wi-Fi handshake to obtain your Wi-Fi password. 
 Parts needed for this lab:
-Required devices to build pwnogotchi.
+* Required devices to build pwnogotchi.
 
  1.  Raspberry Pi 0 W
  * [https://amzn.to/3bgguy3](https://amzn.to/3bgguy3).
