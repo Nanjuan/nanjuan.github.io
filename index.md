@@ -13,7 +13,7 @@ This tutorial will show you how to convert .ova and .vmdk to qcow2. While workin
 
 Alot of people wanna learn how to setup Kali in a VM so they can get their learning going so here is a tutorial to do just that help you set it up Kali in VirtualBox. Plus I added some of the error I have encounted repetitive overtime while helping other setting up their Kali machine in thier computer. This Tutorial is mainly toward Windows computers.
 
-### **How to setup and used your pwnogotchi** [Tutorial Comming soon](./).
+### **How to setup and used your pwnogotchi** [Tutorial Comming soon](./slides/wifi-class/index.html).
 
 This Tutorials will show you what you need to buy and how-to setup your pwnogotchi. Also, what to do when you grab your Wi-Fi handshake to obtain your Wi-Fi password. 
 Parts needed for this lab:
