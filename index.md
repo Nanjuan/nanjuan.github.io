@@ -18,14 +18,15 @@ Alot of people wanna learn how to setup Kali in a VM so they can get their learn
 This Tutorials will show you what you need to buy and how-to setup your pwnogotchi. Also, what to do when you grab your Wi-Fi handshake to obtain your Wi-Fi password. 
 Parts needed for this lab:
 Required devices to build pwnogotchi.
- > 1) Raspberry Pi 0 W
- > a) https://amzn.to/3bgguy3
- > 2) Waveshare 2.13 inch e-Paper Display Hat 250x122 Resolution E-Ink Screen
- > a) https://amzn.to/2OtWZbj
- > 3) Micro USB Data Cable
- > a) https://amzn.to/3bcGCK7
- > 4) Micro SD card
- > a) https://amzn.to/2uj1a2S
+
+ 1.  Raspberry Pi 0 W
+ * https://amzn.to/3bgguy3
+ 2.  Waveshare 2.13 inch e-Paper Display Hat 250x122 Resolution E-Ink Screen
+ * https://amzn.to/2OtWZbj
+ 3.  Micro USB Data Cable
+ * https://amzn.to/3bcGCK7
+ 4.  Micro SD card
+ * https://amzn.to/2uj1a2S
 
 
 
