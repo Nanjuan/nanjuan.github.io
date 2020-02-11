@@ -21,6 +21,7 @@ Required devices to build pwnogotchi.
 
  1.  Raspberry Pi 0 W
  * [https://amzn.to/3bgguy3](https://amzn.to/3bgguy3).
+ * https://amzn.to/3bgguy3
  2.  Waveshare 2.13 inch e-Paper Display Hat 250x122 Resolution E-Ink Screen
  * [https://amzn.to/2OtWZbj](https://amzn.to/2OtWZbj).
  3.  Micro USB Data Cable
