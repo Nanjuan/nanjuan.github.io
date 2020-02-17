@@ -104,6 +104,44 @@ IF the first boot fail and you dont get a screen or is not fully booting go ahea
 
 ---
 
+```
+Bluetooth Config
+main:
+  name: 'Device name HERE'
+  whitelist:
+    - 'The Undercroft'
+    - 'The Undercroft Guest'
+plugins:
+    memtemp:
+      enabled: true
+    bt-tether:
+      enabled: true
+      devices:
+        iPhone:
+          enabled: true
+          search_order: 1
+          mac: 'here'
+          ip: '172.20.10.6'
+          netmask: 24
+          interval: 1
+          scantime: 15
+          share_internet: true
+          priority: 99
+          max_tries: 0
+    ui:
+        display:
+            enabled: true
+            type: 'waveshare_2'
+            color: 'black'
+        web:
+            username: admin
+            password: {enter password Here} 
+        
+
+```
+
+---
+
 # Basic WiFi Class
 
 ---
