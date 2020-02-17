@@ -171,11 +171,34 @@ An attacker can send a deauthentication frame at any time to a wireless access p
 All the handshakes captured by your Pwnagotchi are saved into .pcap files on its filesystem. Each PCAP file that Pwnagotchi generates, is organized according to access point. One PCAP will contain all the handshakes that Pwnagotchi has ever captured for that particular AP and this pcap is what is going to be used to hack the WiFi password. 
 
 * [Source](https://pwnagotchi.ai/)
+
 ---
 
 # Capturing and Cracking your first handshake
 
+To capture you first handshake just leave the Pwnagotchi power on and wait for the SSID of the WiFi you trying to capture the handshake show on the Pwnagotchi screen shows up. Remember only do this to your devices or devices you have full written permission.
+
 ---
+
+## Cracking your handshake
+
+```
+Aircrack-ng <file.pcap> -j ./<output.name.hccapx>
+Hccap2john <file.hccapx> > ./<output.name>
+John --wordlist=<directory to world list> ./<output.name> 
+
+```
+First step is ot used Aircrack-ng input the pcap from the pwnagotchi this will output a file with the extension .hccapx.
+
+Second step used hccap2john to convert the hccapx file from aircrack-ng to john file which does not have a extension and that is ok. 
+
+Third step is to use your favorite wordlist to the output file from hccap2john with John to crack your password. Keep in mind the bigger your wordlist the longest it will take on your regular computer. 
+
+???
+insert image 
+---
+
+
 
 # Thanks
 
