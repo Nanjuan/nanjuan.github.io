@@ -99,15 +99,15 @@ This first book will take a while so be patience grab a drink the only thing you
 IF the first boot fail and you dont get a screen or is not fully booting go ahead and re-image your micro sd card. 
 
 ---
+class: center, middle
 
 # Pwnagotchi Config File
 
 ---
 
 ```
-Bluetooth Config
 main:
-  name: 'Device name HERE'
+  name: '{Device name HERE}'
   whitelist:
     - 'The Undercroft'
     - 'The Undercroft Guest'
@@ -120,7 +120,7 @@ plugins:
         iPhone:
           enabled: true
           search_order: 1
-          mac: 'here'
+          mac: '{insert here}'
           ip: '172.20.10.6'
           netmask: 24
           interval: 1
@@ -134,7 +134,7 @@ plugins:
             type: 'waveshare_2'
             color: 'black'
         web:
-            username: admin
+            username: {Enter username here}
             password: {enter password Here} 
         
 
@@ -142,7 +142,17 @@ plugins:
 
 ---
 
+class: center, middle
+
 # Basic WiFi Class
+
+---
+
+# What is passive sniffing on WiFi? (this example is network hardware based but is the same for WiFi)
+
+This kind of sniffing occurs at the hub. A hub is a device that received the traffic on one port and then retransmits that traffic on all other ports. It does not take into account that the traffic is not meant for other destinations. In this case, if a sniffer device is placed at the hub then all the network traffic can be directly captured by the sniffer. The sniffer can sit there undetected for a long time and spy on the network. Since hubs are not used these days much, this kind of attack will be an old-school trick to perform. Hubs are being replaced by switches and that is where active sniffing comes into the picture.
+
+* [Source](https://www.greycampus.com/blog/information-security/what-is-a-sniffing-attack-and-how-can-you-defend-it)
 
 ---
 
