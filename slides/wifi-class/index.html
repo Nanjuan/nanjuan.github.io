@@ -148,12 +148,29 @@ class: center, middle
 
 ---
 
-# What is passive sniffing on WiFi? (this example is network hardware based but is the same for WiFi)
+## What is passive sniffing on WiFi? (this example is network hardware based but is the same for WiFi)
 
 This kind of sniffing occurs at the hub. A hub is a device that received the traffic on one port and then retransmits that traffic on all other ports. It does not take into account that the traffic is not meant for other destinations. In this case, if a sniffer device is placed at the hub then all the network traffic can be directly captured by the sniffer. The sniffer can sit there undetected for a long time and spy on the network. Since hubs are not used these days much, this kind of attack will be an old-school trick to perform. Hubs are being replaced by switches and that is where active sniffing comes into the picture.
 
 * [Source](https://www.greycampus.com/blog/information-security/what-is-a-sniffing-attack-and-how-can-you-defend-it)
 
+---
+
+## What is WiFi Deauthentication?
+
+Unlike most radio jammers, deauthentication acts in a unique way. The IEEE 802.11 (Wi-Fi) protocol contains the provision for a deauthentication frame. Sending the frame from the access point to a station is called a "sanctioned” technique, to inform a rogue station that have been disconnected from the network".
+
+An attacker can send a deauthentication frame at any time to a wireless access point with a spoofed address for the victim. The protocol does not require any encryption for this frame, even when the session was established with Wired Equivalent Privacy (WEP) for data privacy. The attacker only needs to know the victim's MAC address, which is available in the clear through wireless network sniffing.
+
+* [Source](https://en.wikipedia.org/wiki/Wi-Fi_deauthentication_attack)
+
+---
+
+## What is a WiFi PCAP files on Pwnagotchi?
+
+All the handshakes captured by your Pwnagotchi are saved into .pcap files on its filesystem. Each PCAP file that Pwnagotchi generates, is organized according to access point. One PCAP will contain all the handshakes that Pwnagotchi has ever captured for that particular AP and this pcap is what is going to be used to hack the WiFi password. 
+
+* [Source](https://pwnagotchi.ai/)
 ---
 
 # Capturing and Cracking your first handshake
