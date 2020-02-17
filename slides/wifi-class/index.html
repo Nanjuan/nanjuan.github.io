@@ -99,6 +99,27 @@ This first book will take a while so be patience grab a drink the only thing you
 IF the first boot fail and you dont get a screen or is not fully booting go ahead and re-image your micro sd card. 
 
 ---
+
+# Connect your Pwnagotchi to PC other ethernet
+
+Connect your Data-USB cable to the micro usb toward the center of the Raspberry. 
+
+setup your ethernet adapter to 
+```
+ip address: 10.0.0.1
+subnet mask:255.255.255.0
+default gateway: 10.0.0.1
+if require add a DNS
+```
+After that make sure you can ping 10.0.0.2
+
+To SSH and enter the portal used
+```
+ssh pi@10.0.0.2
+10.0.0.2:8080
+```
+
+---
 class: center, middle
 
 # Pwnagotchi Config File
