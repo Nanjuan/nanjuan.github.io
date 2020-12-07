@@ -25,7 +25,7 @@ Author: N̷̘̩̠͙̬̫̉͑̉͘͜ą̶͓̳͍̙̻̱̎̓̄̈́́́̈̒̀̐͘̕͝͝n�
 
 
 ## Summary <a id="Summary"></a> 
-This tutorial is for you to be able to convert ova and vmdk virtual machines to qcow2 to used it in enviroments that used qcow2 format as VMs.  
+This tutorial allows you to convert ova and vmdk virtual machines to qcow2 to used it in environments that used qcow2 format as VMs.  
 
 
 <br>
@@ -40,7 +40,7 @@ This tutorial is for you to be able to convert ova and vmdk virtual machines to 
 ## PC Prerequisite <a id="First"></a>
 
 
-1. Make sure that if any `disk` was mounted to the VM that is remove from the `device setting` on the `Virtual Machine` program (`Virtualbox`, `VMware`) and that the `display setting` is set to `auto` since I have seen that give problem when the resolution is set to a specific resolution. Any extra `device` that was mounted need to be `remove` too. 
+1. Make sure that if any `disk` was mounted to the VM that is removed from the `device setting` on the `Virtual Machine` program (`Virtualbox`, `VMware`) and that the `display setting` is set to `auto` since I have seen that give problem when the resolution is set to a specific resolution. Any extra `device` that was mounted needs to be `remove` too. 
 
 
 - First make sure the `VM` is `power off`. 
