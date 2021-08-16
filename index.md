@@ -7,15 +7,15 @@ Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
 ### **Converting ova and vmdk to qcow2** [Tutorial](./Hacking-Tutorials/How-to-convert-ova-and-vmdk-to-qcow2.md).
 
-This tutorial will show you how to convert .ova and .vmdk to qcow2. While working with a client, I came alone this issue that we build an environment in VMware because they were going to deploy it in EXSI, but last minute they change to Antsle and AWS environment and when they imported the .ova or .vmdk they were having right only VMs which cause an issue. So I gather all the info I needed to convert these VMs before importing them to the Antsle boxes. I decided to create this tutorial to help others convert their .ova .vmdk to qcow2. 
+This tutorial will show you how to convert .ova and .vmdk to qcow2. I came across the need to import VMware machines to Antsle and AWS environments. So I gather all the info I needed to convert these VMs before importing them to the Antsle boxes. Hopefully, this information helps you convert the virtual machines with no issues.   
 
 ### **How to setup Kali on VirutalBox as a VM** [Tutorial](./Hacking-Tutorials/VirtualBox_setup_with_kali.md).
 
-This tutorial is to assist you in setup Kali OS in a VM to help you start learning. Plus, I added some of the error I have encountered repetitive over time while assisting other setting up their Kali machine in their computer. This tutorial is mainly for Windows computers.
+This tutorial is to assist you in setup Kali OS in a VM to help you start learning. Plus, I added some of the errors I have encountered repeatedly while assisting others in setting up their Kali machine on their computer. This tutorial is mainly for Windows computers.
 
 ### **How to setup and used your pwnogotchi** [Tutorial and Class](./slides/wifi-class/index.html).
 
-This Tutorials will show you what you need to buy and how to set up your pwnogotchi. Also, what to do when you grab your Wi-Fi handshake to obtain your Wi-Fi password. 
+This Tutorials will show you what you need to buy and how to set up your pwnogotchi. Also, what to do when you grab your Wi-Fi handshake to obtain your Wi-Fi password. (old settings)
 Parts needed for this lab:
 * Required devices to build pwnogotchi (affiliate link below).
 
