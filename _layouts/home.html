@@ -7,10 +7,12 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
   
+  <div class="paddingBox">
   <div class="introductionToBlog">
     <p>{{page.homePageDescription}}</p>
   </div>  
-
+  </div>
+  <div class="paddingBox">
     <h3>{{page.postDevided}}</h3>
 
   {{ content }}
@@ -42,7 +44,7 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
+  </div>
     {% if site.paginate %}
       <div class="pager">
         <ul class="pagination">

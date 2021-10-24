@@ -9,7 +9,7 @@
     font-size: xx-large;
   }
 
-  .post-description {
+.post-description {
     font-size: $small-font-size;
     color: #828282;
     padding-top: 1px;
@@ -24,4 +24,23 @@
   font-size: medium;
   color: black;
 }
+
+.paddingBox {
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 0px 0px, 0px 2px 12px rgba(0, 0, 0, 0.2);
+  border-bottom:5px solid #3c43a2
+}
+
+.page-content {
+  padding: $spacing-unit 0;
+  flex: 1 0 auto;
+  background-color: #ffffff;
+}
+
+
 
