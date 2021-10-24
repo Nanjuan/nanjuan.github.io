@@ -23,7 +23,7 @@ email: nestor@nntorres.com
 description: >- # this means to ignore newlines until "baseurl:"
   This blog is to help people with tutorials of tech related issues I have encounter before, blogs, as well as training materials I created from my classes. 
 domain: nanjuan.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com  
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: https://nanjuan.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: N3S_sec
 github_username: Nanjuan
