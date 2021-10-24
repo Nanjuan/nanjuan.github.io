@@ -1,0 +1,27 @@
+---
+---
+
+@import "minima";
+
+.post-header {
+    margin-bottom: $spacing-unit;
+    text-align: center;
+    font-size: xx-large;
+  }
+
+  .post-description {
+    font-size: $small-font-size;
+    color: #828282;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+
+.twitter-box {
+    border: solid #828282 2px;
+  }
+
+.introductionToBlog{
+  font-size: medium;
+  color: black;
+}
+

@@ -1,10 +1,13 @@
 ---
-Layout: default
-Title: How to convert ova and vmdk to qcow2
-Author: N̷̘̩̠͙̬̫̉͑̉͘͜ą̶͓̳͍̙̻̱̎̓̄̈́́́̈̒̀̐͘̕͝͝ṇ̸̢͉̂̽̎̾̋͛̇̉̊̚͜j̷̢̧̲̬̥̦̼͓̖̼̄̅u̸̞͎̻̍̀̋͋̊̀̓͑̈́͘͘á̴̺̫̮͈̥̳͐̍̚ṉ̴͓̯̺͎͓̅̍̌̆̚͝ N Torres
+layout: post
+title:  "How to convert ova and vmdk to qcow2 tutorial."
+date:   2019-10-05 20:43:31 -0400
+categories: Hacking
+authorMain: Nestor N Torres
+tag: Homelab
+description: This tutorial will show you how to convert .ova and .vmdk to qcow2. I came across the need to import VMware machines to Antsle and AWS environments. So I gather all the info I needed to convert these VMs before importing them to the Antsle boxes. Hopefully, this information helps you convert the virtual machines with no issues.
 ---
 
-- [Home Page](https://nanjuan.github.io)
 
 ### Contact
 - [LinkedIn](https://www.linkedin.com/in/nanjuan/)
@@ -48,13 +51,13 @@ This tutorial allows you to convert ova and vmdk virtual machines to qcow2 to us
 - Then make sure that `CD/DVD (IDE)` is set to `Auto detect`.
 - Then make sure that `Display` is set to `Auto detect` as well. 
 
-![Section1](/assets/qcow2-1.png)
+![Section1](/blog-assets/ova-vmdk2qcow2/qcow2-1.png)
 
 - On `Virtualbox` go to `setting` on the `top left area of the program`.
 - Then go to `storage` and make sure is `empty` like the picture bellow. 
 - Here as long as you `did not change` the `display setting` that should be ok if you did set to `default` again.
 
-![Section1](/assets/qcow2-2.PNG)
+![Section1](/blog-assets/ova-vmdk2qcow2/qcow2-2.PNG)
 
 
 
@@ -91,9 +94,9 @@ This tutorial allows you to convert ova and vmdk virtual machines to qcow2 to us
 - This might take a `while` to `decompress` depending on the `side` of the `vm`. 
 - This will give you the `.ovf` `.mf` `.vmdk` that you need to convert now you can move to `section 2`
 
-![Section4](/assets/qcow2-3.PNG)
+![Section4](/blog-assets/ova-vmdk2qcow2/qcow2-3.PNG)
 
-![Section4](/assets/qcow2-4.PNG)
+![Section4](/blog-assets/ova-vmdk2qcow2/qcow2-4.PNG)
 
 ## Section 2 <a id="Five"></a>
 
@@ -102,14 +105,14 @@ This tutorial allows you to convert ova and vmdk virtual machines to qcow2 to us
 - First step when you have the `VM.vmdk`  is to run the `qemu-img` command to convert from `.vmdk` to `.qcom2`
 - Open terminal and `navigate to the folder` that have the `VM.vmdk` you want to `convert`. 
 
-![Section5](/assets/qcow2-5.PNG)
+![Section5](/blog-assets/ova-vmdk2qcow2/qcow2-5.PNG)
 
 - Then run the command `qemu-img convert -O qcow2 inputVM.vmdk outputVM.qcow2`. 
 - This `will take some time depending on the size of the VM` and `computer processing power`. 
 
-![Section5](/assets/qcow2-6.PNG)
+![Section5](/blog-assets/ova-vmdk2qcow2/qcow2-6.PNG)
 
-![Section5](/assets/qcow2-7.PNG)
+![Section5](/blog-assets/ova-vmdk2qcow2/qcow2-7.PNG)
 
 # And your done!!!
 
