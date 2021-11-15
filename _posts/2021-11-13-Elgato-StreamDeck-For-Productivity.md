@@ -36,6 +36,8 @@ Some prerequisites to keep in mind if you planning to follow this tutorial. I am
 
 ## How to open Chrome with different Profiles/Accounts on the Stream Deck.
 
+The following step will help you create the necessary Automator scripts to open different chrome windows with other accounts from your computer. 
+
 1. Open the `Automator` program and click `New Document` if prompt. Then select application and click choose. 
 ![Section1](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-App-Open-Click-App.png)
 
@@ -60,6 +62,8 @@ Some prerequisites to keep in mind if you planning to follow this tutorial. I am
 <a id="metasploit"></a> 
 
 ## How to Add Metasploit to Elgato Stream Deck. 
+
+The following steps will show you how to add Metasploit to Elgato Stream Deck.
 
 * pre-requirement make sure you have Metasploit installed and you are able to run it from the command line. 
 
@@ -132,6 +136,8 @@ Some prerequisites to keep in mind if you planning to follow this tutorial. I am
 
 ## How to open Burp and other tools with Stream Deck
 
+The following steps will show you how to add Burp and other software to Elgato Stream Deck.
+
 1. Open the Elgato Stream Deck software and search for `Open` on the right search bar and drag to one of the empty fiels. 
 ![Section3](/blog-assets/Elgato-StreamDeck-For-Productivity/openApplications-1.png)
 
@@ -146,6 +152,8 @@ Some prerequisites to keep in mind if you planning to follow this tutorial. I am
 <a id="Add2StreamDeck"></a>
 
 ## How to Add Automation script to Elgato Stream Deck.
+
+The following steps will show you how to add Automator scripts to Elgato Stream Deck.
 
 1. Open the Elgato Stream Deck software and search for `open` on the right search bar. 
     ![SectionLast](/blog-assets/Elgato-StreamDeck-For-Productivity/Stream-Deck-Software-Open.png)
