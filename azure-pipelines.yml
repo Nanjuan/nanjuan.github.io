@@ -13,6 +13,7 @@ steps:
 - script: echo Hello, world!
 - script: echo testing now!
   displayName: 'Run a one-line script'
+- script: ping 1.1.1.1
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
