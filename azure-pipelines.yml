@@ -13,7 +13,21 @@ steps:
 - script: echo Hello, world!
 - script: echo testing now!
   displayName: 'Run a one-line script'
-- script: ping 1.1.1.1
+- script: sudo apt-get install ruby-full build-essential zlib1g-dev
+  displayName: 'install ruby and pre other'
+- script: echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+- script: echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+- script: echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+- script: source ~/.bashrc
+  displayName: 'added environment variables to your ~/.bashrc'
+- script: gem install jekyll bundler
+  displayName: 'install jekyll bundler'
+- script: bundle install
+  displayName: 'install project pakages'
+- script: bundle exec jekyll serve
+  displayName: 'start server'
+- script: ping 127.0.0.1:4000
+  displayName: 'ping up server'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
