@@ -2,30 +2,24 @@
 layout: default
 ---
 
+
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-  
-  <div class="paddingBox">
-  <div class="introductionToBlog">
-    <p>{{page.homePageDescription}}</p>
-  </div>  
-  </div>
-  <div class="paddingBox">
-    <h3>{{page.postDevided}}</h3>
 
   {{ content }}
+
+
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}
     {% assign posts = site.posts %}
   {% endif %}
 
+
   {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
+    <div class="paddingBox">
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
@@ -45,6 +39,7 @@ layout: default
       {%- endfor -%}
     </ul>
   </div>
+
     {% if site.paginate %}
       <div class="pager">
         <ul class="pagination">

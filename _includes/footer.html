@@ -1,36 +1,28 @@
-<!-- The Footer -->
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  
+    <div class="wrapper">
+  
+      <h2 class="footer-heading">Nestor Blog</h2>
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li class="p-name">Nestor Torres</li><li><a class="u-email" href="mailto:nestor@nntorres.com">nestor@nntorres.com</a></li></ul>
+       
+        </div>
 
-<footer class="row pl-3 pr-3">
-  <div class="col-12 d-flex justify-content-between align-items-center text-muted pl-0 pr-0">
-    <div class="footer-left">
-      <p class="mb-0">
-        © {{ 'now' | date: "%Y" }}
-        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-        {% if site.data.locales[lang].copyright.brief %}
-        <span data-toggle="tooltip" data-placement="top"
-          title="{{ site.data.locales[lang].copyright.verbose }}">{{ site.data.locales[lang].copyright.brief }}</span>
-        {% endif %}
-      </p>
-    </div>
-
-    <div class="footer-right">
-      <p class="mb-0">
-        {% capture _platform %}
-          <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-        {% endcapture %}
-
-        {% capture _theme %}
-          <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
-        {% endcapture %}
-
-        {{ site.data.locales[lang].meta
-          | default: 'Powered by :PLATFORM with :THEME theme.'
-          | replace: ':PLATFORM', _platform | replace: ':THEME', _theme
-        }}
-
-      </p>
-    </div>
-
+        
+  
+        <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Nanjuan"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Nanjuan</span></a></li><li><a href="https://www.twitter.com/N3S_sec"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">N3S_sec</span></a></li></ul>
   </div>
-
-</footer>
+  
+        <div class="footer-col footer-col-3">
+        <p>{{ site.description | escape }}</p>
+        </div>
+    
+      </div>
+  
+    </div>
+  
+  </footer>

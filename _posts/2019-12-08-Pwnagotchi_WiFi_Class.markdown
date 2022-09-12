@@ -2,7 +2,7 @@
 layout: post
 title:  "Pwnagotchi WiFi Class"
 date:   2019-12-08 20:43:31 -0400
-categories: [Hacking, Tutorial]
+categories: Hacking
 authorMain: Nestor N Torres
 tag: Tutorial
 description: This Tutorials will show you what you need to buy and how to set up your pwnogotchi. (old settings)

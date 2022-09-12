@@ -2,7 +2,7 @@
 layout: post
 title:  "How to setup Kali on VirutalBox as a VM Tutorial Tutorial."
 date:   2019-11-05 20:43:31 -0400
-categories: [Hacking, Tutorial]
+categories: Hacking
 authorMain: Nestor N Torres
 tag: Homelab
 description: This tutorial is to assist you in setup Kali OS in a VM to help you start learning. Plus, I added some of the errors I have encountered repeatedly while assisting others in setting up their Kali machine on their computer. This tutorial is mainly for Windows computers.
