@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Elgato Stream Deck for Pentesters"
-categories: Productivity
+categories: [Productivity, Tutorial]
 authorMain: Nestor N Torres
 tag: Stream Deck
 description: I made this page to show how I use the Elgato Stream Deck for pentesting. Hopefully, this page and the instructions here motivate you to get a stream deck and use it for pentesting and every day productivity. 
