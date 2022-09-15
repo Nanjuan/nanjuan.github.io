@@ -1,0 +1,173 @@
+I"Å <h3 id="contact">Contact</h3>
+<ul>
+  <li><a href="https://www.linkedin.com/in/nanjuan/">LinkedIn</a></li>
+  <li>Email: nestor@nntorres.com</li>
+</ul>
+
+<h3 id="table">Table</h3>
+<ol>
+  <li><a href="#preinfo">Prerequisites</a></li>
+  <li><a href="#Summary">Summary</a></li>
+  <li><a href="#First">PC Prerequisites</a></li>
+  <li><a href="#Second">VirtualBox installation</a></li>
+  <li><a href="#Third">Kali Virtual Machine</a></li>
+  <li><a href="#Fourth">Network adapter setup</a></li>
+</ol>
+
+<h2 id="prerequisites-">Prerequisites <a id="preinfo"></a></h2>
+<ol>
+  <li>Have <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> Downloaded</li>
+  <li>Have <a href="https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-hyperv-image-download/">Kali pre-build OS for VirtualBox</a> Downloaded</li>
+  <li>Have <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox Extension pack</a> Downloaded</li>
+  <li>Enable Virtualization on bios</li>
+</ol>
+
+<h2 id="summary-">Summary <a id="Summary"></a></h2>
+<p>This tutorial is for you to be able to install and setup VirtualBox on a Windows computer and with minimal changes on Mac OS and change network adapter.</p>
+
+<p><br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Network adapters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NAT</td>
+      <td>NAT gateways sit between two networks adn emulated by your computer</td>
+    </tr>
+    <tr>
+      <td>Bridge Network</td>
+      <td>Bridge is exacly that when you give direct access to the computer network adapter</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="pc-prerequisite-">PC Prerequisite <a id="First"></a></h2>
+
+<ol>
+  <li>Go to <code class="language-plaintext highlighter-rouge">Taskbar</code> and right click and then select <code class="language-plaintext highlighter-rouge">Task Manager</code></li>
+</ol>
+
+<ul>
+  <li>After selecting <code class="language-plaintext highlighter-rouge">Task Manager</code> select <code class="language-plaintext highlighter-rouge">Performance</code></li>
+  <li>This will let you know if your computer have <code class="language-plaintext highlighter-rouge">Virtualization</code></li>
+  <li>Look at the bottom left for <code class="language-plaintext highlighter-rouge">Virtualization</code> to see if is <code class="language-plaintext highlighter-rouge">Enabled</code> or <code class="language-plaintext highlighter-rouge">Disable</code></li>
+  <li>If <code class="language-plaintext highlighter-rouge">Virtualization</code> is <code class="language-plaintext highlighter-rouge">disable</code> go to google and search for your pc manufacture on how to enable <code class="language-plaintext highlighter-rouge">Virtualization</code>.</li>
+  <li>You will get a error like the one bellow if your <code class="language-plaintext highlighter-rouge">virtualization</code> is <code class="language-plaintext highlighter-rouge">disable</code> and you try to install <code class="language-plaintext highlighter-rouge">VirtualBox</code>.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/2-1.png" alt="Section1" /></p>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/1.png" alt="Section1" /> 
+<img src="/blog-assets/virtualboxsetup4kali/2.png" alt="Section1" /></p>
+
+<h2 id="start-the-virtualbox-installation-">Start the VirtualBox installation <a id="Second"></a></h2>
+
+<ol>
+  <li>Go to where you download your files to install <code class="language-plaintext highlighter-rouge">VirtualBox</code>.</li>
+</ol>
+
+<ul>
+  <li>Double click on the <code class="language-plaintext highlighter-rouge">VirtualBox</code> installation file.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/3.png" alt="Section2" /></p>
+
+<ul>
+  <li>Then go through the installation process.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/4.png" alt="Section2" /></p>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/5.png" alt="Section2" /></p>
+
+<ul>
+  <li>When your done you will be welcome with similars screens.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/6.png" alt="Section2" /></p>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/7.png" alt="Section2" /></p>
+
+<h2 id="start-the-instalation-of-kali-virtual-machine-">Start the Instalation of Kali Virtual Machine <a id="Third"></a></h2>
+
+<ol>
+  <li>Go back to the folder where your downloaded files are located.</li>
+</ol>
+
+<ul>
+  <li>Double click on the <code class="language-plaintext highlighter-rouge">kali***.ova</code> file to import the virtual machine this might take couple of second to show the pop up then click <code class="language-plaintext highlighter-rouge">import</code> and wait.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/8.png" alt="Section3" /></p>
+
+<ul>
+  <li>After the import is done double click on the <code class="language-plaintext highlighter-rouge">Kali</code> virtual machine to start machine if you get a error like bellow you must install <code class="language-plaintext highlighter-rouge">VirtualBox Extension Pack</code></li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/9.png" alt="Section3" /></p>
+
+<ul>
+  <li>Go to where you have your downloaded the install files and <code class="language-plaintext highlighter-rouge">double click</code> on <code class="language-plaintext highlighter-rouge">VirtualBox Extension Pack</code> if <code class="language-plaintext highlighter-rouge">VirtualBox</code> is open check the pop up or a second windows that might been open and click <code class="language-plaintext highlighter-rouge">Install</code>, and go throught the installation process.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/10.png" alt="Section3" /></p>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/11.png" alt="Section3" /></p>
+
+<ol>
+  <li>Last step start your <code class="language-plaintext highlighter-rouge">Kali Virtual machine</code> again.</li>
+</ol>
+
+<ul>
+  <li>The log in information for the Kali pre build machine is</li>
+  <li><code class="language-plaintext highlighter-rouge">Username:</code> <code class="language-plaintext highlighter-rouge">root</code>
+<code class="language-plaintext highlighter-rouge">Password:</code> <code class="language-plaintext highlighter-rouge">toor</code></li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/11.png" alt="Section3" /></p>
+
+<ul>
+  <li>And!!!!!!!!!!! your done with the basic install of Kali on VirtualBox.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/12.png" alt="Section3" /></p>
+
+<h2 id="network-adapter-setup-">Network adapter setup <a id="Fourth"></a></h2>
+
+<ol>
+  <li>The fun part deciding to used <code class="language-plaintext highlighter-rouge">NAT</code> or <code class="language-plaintext highlighter-rouge">Bridge</code> network.
+    <ul>
+      <li>If you want to have your network router throught your computer leave <code class="language-plaintext highlighter-rouge">NAT</code></li>
+      <li>If you want to have your virtual machine connected directly to the network card and get a external ip set it up to <code class="language-plaintext highlighter-rouge">Bridge</code> mode.</li>
+    </ul>
+  </li>
+  <li>First select <code class="language-plaintext highlighter-rouge">Machine</code> on the top left to get the drop down.</li>
+</ol>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/13.png" alt="Section3" /></p>
+
+<ul>
+  <li>Then select <code class="language-plaintext highlighter-rouge">Settings</code> to open the setting windows.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/14.png" alt="Section3" /></p>
+
+<ul>
+  <li>The select <code class="language-plaintext highlighter-rouge">Network</code> to get to the network settings.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/15.png" alt="Section3" /></p>
+
+<ul>
+  <li>Then select on the second drop down your <code class="language-plaintext highlighter-rouge">Wi-Fi</code> or <code class="language-plaintext highlighter-rouge">External Wi-Fi device</code> and press ok.</li>
+</ul>
+
+<p><img src="/blog-assets/virtualboxsetup4kali/16.png" alt="Section3" /></p>
+
+<h2 id="well-your-done-any-question-email-me-any-feedback-email-me-any-spelling-error-sorry-and-email-me-thanks">Well your done!!!! any question email me!!!!! Any feedback email me!!!! Any spelling error sorry and email me!!!! Thanks!!!!!</h2>
+:ET

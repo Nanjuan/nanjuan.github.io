@@ -1,0 +1,165 @@
+I"s'<h3 id="contact">Contact</h3>
+<ul>
+  <li><a href="https://www.linkedin.com/in/nanjuan/">LinkedIn</a></li>
+  <li>Email: nestor@nntorres.com</li>
+</ul>
+
+<h3 id="table">Table</h3>
+<ol>
+  <li><a href="#preinfo">Prerequisites</a></li>
+  <li><a href="#Summary">Summary</a></li>
+  <li><a href="#First">PC Prerequisites</a></li>
+  <li><a href="#Second">Linux Terminal Steps</a></li>
+  <li><a href="#Third">qemu-units installation</a></li>
+  <li><a href="#Fourth">.OVA Convert Section 1</a></li>
+  <li><a href="#Five">.vmdk Convert Section 2</a></li>
+</ol>
+
+<h2 id="prerequisites-">Prerequisites <a id="preinfo"></a></h2>
+<ol>
+  <li>Have a <a href="https://github.com/Nanjuan/Hacking-Tools-Virtualization-Tutorials/blob/master/VirtualBox_setup_with_kali.md">Virtual Machine</a> install</li>
+  <li>Have <a href="https://github.com/Nanjuan/Hacking-Tools-Virtualization-Tutorials/blob/master/VirtualBox_setup_with_kali.md">Kali</a> install</li>
+</ol>
+
+<h2 id="summary-">Summary <a id="Summary"></a></h2>
+<p>This tutorial allows you to convert ova and vmdk virtual machines to qcow2 to used it in environments that used qcow2 format as VMs.</p>
+
+<p><br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type of VMs</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VM</td>
+      <td>Stand for Virtual Machine</td>
+    </tr>
+    <tr>
+      <td>name.ova</td>
+      <td>The .ova file is one type of VM extension mainly used in Virtual Box or VMware.</td>
+    </tr>
+    <tr>
+      <td>name.vmdk</td>
+      <td>The .vmdk file is one type of VM extension mainly used in VMware and it have two extra files with it .ovf and .mf</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="pc-prerequisite-">PC Prerequisite <a id="First"></a></h2>
+
+<ol>
+  <li>Make sure that if any <code class="language-plaintext highlighter-rouge">disk</code> was mounted to the VM that is removed from the <code class="language-plaintext highlighter-rouge">device setting</code> on the <code class="language-plaintext highlighter-rouge">Virtual Machine</code> program (<code class="language-plaintext highlighter-rouge">Virtualbox</code>, <code class="language-plaintext highlighter-rouge">VMware</code>) and that the <code class="language-plaintext highlighter-rouge">display setting</code> is set to <code class="language-plaintext highlighter-rouge">auto</code> since I have seen that give problem when the resolution is set to a specific resolution. Any extra <code class="language-plaintext highlighter-rouge">device</code> that was mounted needs to be <code class="language-plaintext highlighter-rouge">remove</code> too.</li>
+</ol>
+
+<ul>
+  <li>First make sure the <code class="language-plaintext highlighter-rouge">VM</code> is <code class="language-plaintext highlighter-rouge">power off</code>.</li>
+  <li>On <code class="language-plaintext highlighter-rouge">VMware</code> right click on the <code class="language-plaintext highlighter-rouge">VM</code> you want to <code class="language-plaintext highlighter-rouge">convert</code> and <code class="language-plaintext highlighter-rouge">click</code> on <code class="language-plaintext highlighter-rouge">setting</code>.</li>
+  <li>Then make sure that <code class="language-plaintext highlighter-rouge">CD/DVD (IDE)</code> is set to <code class="language-plaintext highlighter-rouge">Auto detect</code>.</li>
+  <li>Then make sure that <code class="language-plaintext highlighter-rouge">Display</code> is set to <code class="language-plaintext highlighter-rouge">Auto detect</code> as well.</li>
+</ul>
+
+<p><img src="/blog-assets/ova-vmdk2qcow2/qcow2-1.png" alt="Section1" /></p>
+
+<ul>
+  <li>On <code class="language-plaintext highlighter-rouge">Virtualbox</code> go to <code class="language-plaintext highlighter-rouge">setting</code> on the <code class="language-plaintext highlighter-rouge">top left area of the program</code>.</li>
+  <li>Then go to <code class="language-plaintext highlighter-rouge">storage</code> and make sure is <code class="language-plaintext highlighter-rouge">empty</code> like the picture bellow.</li>
+  <li>Here as long as you <code class="language-plaintext highlighter-rouge">did not change</code> the <code class="language-plaintext highlighter-rouge">display setting</code> that should be ok if you did set to <code class="language-plaintext highlighter-rouge">default</code> again.</li>
+</ul>
+
+<p><img src="/blog-assets/ova-vmdk2qcow2/qcow2-2.PNG" alt="Section1" /></p>
+
+<h2 id="start-the-conversion-on-a-linux-ubuntukaliother-terminal-">Start the Conversion on a linux (Ubuntu,Kali,Other) Terminal <a id="Second"></a></h2>
+
+<ol>
+  <li>First step is to export the machine you want to convert to either 
+<br /></li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">VM Formats to conversts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">vm.ova</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">vm.vmdk</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Make sure that the VM file you want to converts is on the a Linux machine that have qemu.utils install to make it easier to convert the vm.</li>
+</ul>
+
+<h2 id="make-sure-qemu-utils-are-install-">Make sure qemu-utils are install <a id="Third"></a></h2>
+
+<ol>
+  <li>To make sure you have qemu-img install.</li>
+</ol>
+
+<ul>
+  <li>open terminal</li>
+  <li>type <code class="language-plaintext highlighter-rouge">qemu-img</code> and press <code class="language-plaintext highlighter-rouge">enter</code></li>
+  <li>you should get sometime alone the line of <code class="language-plaintext highlighter-rouge">qemu-img: not enought arguments</code> this will let you know that qemu-utils are install on your linux computer</li>
+  <li>otherwise on the same <code class="language-plaintext highlighter-rouge">terminal</code> run <code class="language-plaintext highlighter-rouge">sudo apt-get update</code> after that is done run <code class="language-plaintext highlighter-rouge">sudo apt-get install qemu-utils</code></li>
+  <li>Next step is to <code class="language-plaintext highlighter-rouge">navigates</code> to the <code class="language-plaintext highlighter-rouge">folder</code> that have the <code class="language-plaintext highlighter-rouge">VM you exported</code> and want to <code class="language-plaintext highlighter-rouge">convert</code>.</li>
+  <li>if you have <code class="language-plaintext highlighter-rouge">vm.ova</code> follow <code class="language-plaintext highlighter-rouge">section 1</code> <code class="language-plaintext highlighter-rouge">otherwise</code> go to <code class="language-plaintext highlighter-rouge">section 2</code></li>
+</ul>
+
+<h2 id="section-1-">Section 1 <a id="Fourth"></a></h2>
+
+<ol>
+  <li>Here is how to <code class="language-plaintext highlighter-rouge">extract</code> a <code class="language-plaintext highlighter-rouge">.ova</code> to <code class="language-plaintext highlighter-rouge">.vmdk</code> so you can continue on <code class="language-plaintext highlighter-rouge">section 2</code></li>
+</ol>
+
+<ul>
+  <li>After navigating to the folder run <code class="language-plaintext highlighter-rouge">tar -xvf inputVM.ova</code> the <code class="language-plaintext highlighter-rouge">VM.ova</code> would be the name of your vm that you want to covert so that might vary for you VM.</li>
+  <li>This might take a <code class="language-plaintext highlighter-rouge">while</code> to <code class="language-plaintext highlighter-rouge">decompress</code> depending on the <code class="language-plaintext highlighter-rouge">side</code> of the <code class="language-plaintext highlighter-rouge">vm</code>.</li>
+  <li>This will give you the <code class="language-plaintext highlighter-rouge">.ovf</code> <code class="language-plaintext highlighter-rouge">.mf</code> <code class="language-plaintext highlighter-rouge">.vmdk</code> that you need to convert now you can move to <code class="language-plaintext highlighter-rouge">section 2</code></li>
+</ul>
+
+<p><img src="/blog-assets/ova-vmdk2qcow2/qcow2-3.PNG" alt="Section4" /></p>
+
+<p><img src="/blog-assets/ova-vmdk2qcow2/qcow2-4.PNG" alt="Section4" /></p>
+
+<h2 id="section-2-">Section 2 <a id="Five"></a></h2>
+
+<ol>
+  <li>Here is the step to convert .vmdk to .qcow2</li>
+</ol>
+
+<ul>
+  <li>First step when you have the <code class="language-plaintext highlighter-rouge">VM.vmdk</code>  is to run the <code class="language-plaintext highlighter-rouge">qemu-img</code> command to convert from <code class="language-plaintext highlighter-rouge">.vmdk</code> to <code class="language-plaintext highlighter-rouge">.qcom2</code></li>
+  <li>Open terminal and <code class="language-plaintext highlighter-rouge">navigate to the folder</code> that have the <code class="language-plaintext highlighter-rouge">VM.vmdk</code> you want to <code class="language-plaintext highlighter-rouge">convert</code>.</li>
+</ul>
+
+<p><img src="/blog-assets/ova-vmdk2qcow2/qcow2-5.PNG" alt="Section5" /></p>
+
+<ul>
+  <li>Then run the command <code class="language-plaintext highlighter-rouge">qemu-img convert -O qcow2 inputVM.vmdk outputVM.qcow2</code>.</li>
+  <li>This <code class="language-plaintext highlighter-rouge">will take some time depending on the size of the VM</code> and <code class="language-plaintext highlighter-rouge">computer processing power</code>.</li>
+</ul>
+
+<p><img src="/blog-assets/ova-vmdk2qcow2/qcow2-6.PNG" alt="Section5" /></p>
+
+<p><img src="/blog-assets/ova-vmdk2qcow2/qcow2-7.PNG" alt="Section5" /></p>
+
+<h1 id="and-your-done">And your done!!!</h1>
+
+<h2 id="now-you-can-import-this-new-vmqcow2-to-any-kvm-hypervisor-like-antsle-box-and-the-vm-will-be-read-and-write-and-not-only-read">Now you can import this new VM.qcow2 to any KVM Hypervisor like Antsle box and the VM will be read and write and not only read.</h2>
+
+<h2 id="well-your-done-any-question-email-me-any-feedback-email-me-any-spelling-error-sorry-and-email-me-thanks">Well your done!!!! any question email me!!!!! Any feedback email me!!!! Any spelling error sorry and email me!!!! Thanks!!!!!</h2>
+
+<ul>
+  <li><a href="https://nanjuan.github.io">Home Page</a></li>
+</ul>
+
+:ET

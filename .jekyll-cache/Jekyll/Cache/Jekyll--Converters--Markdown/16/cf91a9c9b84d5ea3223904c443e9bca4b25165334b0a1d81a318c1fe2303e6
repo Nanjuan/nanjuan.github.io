@@ -1,0 +1,2 @@
+I"Q<p>This tutorial will show you how to convert .ova and .vmdk to qcow2. I came across the need to import VMware machines to Antsle and AWS environments. So I gather all the info I needed to convert these VMs before importing them to the Antsle boxes. Hopefully, this information helps you convert the virtual machines with no issues.</p>
+:ET
