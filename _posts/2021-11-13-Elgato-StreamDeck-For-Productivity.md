@@ -42,20 +42,20 @@ The following step will help you create the necessary Automator scripts to open 
 ![Section1](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-App-Open-Click-App.png)
 
 2. Search on the left upper search bar for `Run Shell Script` and drag that actions to the right window. 
-![Section1](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Shell-Script-on-Right.png)
+![Section12](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Shell-Script-on-Right.png)
 
 3. On the Run Shell Script windows, enter the following command line. This line will open Chrome and with the profile set as one in a new chrome window. By increasing the number and pressing `Run` on the Automator top right corner, you can test the code to verify you are able to open the correct browser profile you are trying to add for automation. 
     ```
     /Applications/Google\ Chrome.app/Contents/MacOS/Google\ chrome --profile-directory="Profile 1"
     ```
 
-    ![Section1](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Script-Command-Line.png)
+    ![Section13](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Script-Command-Line.png)
 
 4. After you are able to test and run the correct profile got to `File` and click `save`. On the windows that open, name the Automation program as you which and make sure the File Format is set to `Application` and click save. 
-![Section1](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Save-Window.png)
+![Section14](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Save-Window.png)
 
 5. To test the script, just find where it is saved and click it like any other application to see if it opens Chrome with the correct profile. To choose a different profile, perform the same steps on the group, change the `Profile 1` to `Profile 2`, and keep increasing the number depending on how many profiles you have on your Chrome Browser. 
-![Section1](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Script-Command-Line-2.png)
+![Section15](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Script-Command-Line-2.png)
 
 [Top](#Top)
 

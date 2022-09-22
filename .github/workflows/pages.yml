@@ -26,11 +26,6 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "_site${{ steps.pages.outputs.base_path }}"
-
       - name: Check baseurl
         run: |
           baseurl="$(grep '^baseurl:' _config.yml | sed "s/.*: *//;s/['\"]//g;s/#.*//")"
