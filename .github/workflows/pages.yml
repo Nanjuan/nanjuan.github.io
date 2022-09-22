@@ -26,10 +26,6 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Test site
-        run: |
-          bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
-
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v1
         with:
