@@ -1,0 +1,211 @@
+I"<3<p><a id="Top"></a></p>
+<h3 id="contact">Contact</h3>
+<ul>
+  <li><a href="https://www.linkedin.com/in/nanjuan/">LinkedIn</a></li>
+  <li>Email: nestor@nntorres.com</li>
+</ul>
+
+<h3 id="table">Table</h3>
+<ol>
+  <li><a href="#Summary">Summary</a></li>
+  <li><a href="#preinfo">Prerequisites</a></li>
+  <li><a href="#OpenChrome">Open Chrome with Different Profiles</a></li>
+  <li><a href="#metasploit">How to Metasploit to Stream Deck</a></li>
+  <li><a href="#openTools">How to open Burp and other tools</a></li>
+  <li><a href="#Add2StreamDeck">Add Automation Script to Stream Deck</a></li>
+</ol>
+
+<h2 id="summary-">Summary <a id="Summary"></a></h2>
+<p>Why should I use a Stream Deck to be more productive?</p>
+
+<p>One day, I came up with this idea while looking at random tech online and came across the Elgato Stream Deck. Streamers use the Stream Deck to make repetitive actions like turning the mic on and off to record a clip while they stream easily. I realized that I could simply use automation and invoke these scripts from the stream deck to increase my productivity and automate mundane actions like opening different chromes pages from different profiles. I also plan to use this document as a live document where I can keep adding automation scripts I add to my Stream Deck.</p>
+
+<p><a href="#Top">Top</a></p>
+
+<h2 id="prerequisites-">Prerequisites <a id="preinfo"></a></h2>
+<p>Some prerequisites to keep in mind if you planning to follow this tutorial. I am using Mac OS 11.6 at the time of writing this tutorial. For Chrome, I am using the laters version in November 2021. Also, I am using Mac OS Automator software. Also, if I see a lot of interest in this post, I might work on Windows version for this tutorial.</p>
+
+<p><a href="#Top">Top</a></p>
+
+<p><a id="OpenChrome"></a></p>
+
+<h2 id="how-to-open-chrome-with-different-profilesaccounts-on-the-stream-deck">How to open Chrome with different Profiles/Accounts on the Stream Deck.</h2>
+
+<p>The following step will help you create the necessary Automator scripts to open different chrome windows with other accounts from your computer.</p>
+
+<ol>
+  <li>
+    <p>Open the <code class="language-plaintext highlighter-rouge">Automator</code> program and click <code class="language-plaintext highlighter-rouge">New Document</code> if prompt. Then select application and click choose. 
+<img src="/assets/img/Elgato-StreamDeck-For-Productivity/Automation-App-Open-Click-App.png" alt="Section1" /></p>
+  </li>
+  <li>
+    <p>Search on the left upper search bar for <code class="language-plaintext highlighter-rouge">Run Shell Script</code> and drag that actions to the right window. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Shell-Script-on-Right.png" alt="Section12" /></p>
+  </li>
+  <li>On the Run Shell Script windows, enter the following command line. This line will open Chrome and with the profile set as one in a new chrome window. By increasing the number and pressing <code class="language-plaintext highlighter-rouge">Run</code> on the Automator top right corner, you can test the code to verify you are able to open the correct browser profile you are trying to add for automation.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ chrome --profile-directory="Profile 1"
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Script-Command-Line.png" alt="Section13" /></p>
+  </li>
+  <li>
+    <p>After you are able to test and run the correct profile got to <code class="language-plaintext highlighter-rouge">File</code> and click <code class="language-plaintext highlighter-rouge">save</code>. On the windows that open, name the Automation program as you which and make sure the File Format is set to <code class="language-plaintext highlighter-rouge">Application</code> and click save. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Save-Window.png" alt="Section14" /></p>
+  </li>
+  <li>To test the script, just find where it is saved and click it like any other application to see if it opens Chrome with the correct profile. To choose a different profile, perform the same steps on the group, change the <code class="language-plaintext highlighter-rouge">Profile 1</code> to <code class="language-plaintext highlighter-rouge">Profile 2</code>, and keep increasing the number depending on how many profiles you have on your Chrome Browser. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Script-Command-Line-2.png" alt="Section15" /></li>
+</ol>
+
+<p><a href="#Top">Top</a></p>
+
+<p><a id="metasploit"></a></p>
+
+<h2 id="how-to-add-metasploit-to-elgato-stream-deck">How to Add Metasploit to Elgato Stream Deck.</h2>
+
+<p>The following steps will show you how to add Metasploit to Elgato Stream Deck.</p>
+
+<ul>
+  <li>pre-requirement make sure you have Metasploit installed and you are able to run it from the command line.</li>
+</ul>
+
+<ol>
+  <li>
+    <p>Open the Elgato Stream Deck software and search for <code class="language-plaintext highlighter-rouge">Multi Action</code> on the right search bar and drag to one of the empty fiels. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-1.png" alt="Section2" /></p>
+  </li>
+  <li>Enter the name you desire on the title section and on Content click on Content section the little arrow icon. Then add the follwing step to the Multi Action.
+    <ol>
+      <li>System: Open</li>
+      <li>System: Text</li>
+      <li>Stream Deck: Delay</li>
+      <li>System: Text</li>
+      <li>Stream Deck: Delay</li>
+      <li>System: Text</li>
+    </ol>
+
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-2.png" alt="Section2" /></p>
+  </li>
+  <li>
+    <p>On the System: Option select the terminal application to open. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-3.png" alt="Section2" /></p>
+  </li>
+  <li>
+    <p>On the first System: Text enter the title you want to use to identify this step then enter the command line to start the Metasploit databse my example is below and check the box that said. <code class="language-plaintext highlighter-rouge">Press Enter After messages</code></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre> /opt/metasploit-framework/bin/msfdb start
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-4.png" alt="Section2" /></p>
+  </li>
+  <li>
+    <p>On the two Stream Deck: Delay add <code class="language-plaintext highlighter-rouge">2000 ms</code> 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-5.png" alt="Section2" /></p>
+  </li>
+  <li>
+    <p>On the second System: Text enter the title you want to use to identify this step then enter the command line to answer the question from starting msfdb. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-6.png" alt="Section2" /></p>
+  </li>
+  <li>
+    <p>On the last System: Text enter the title you want to use to identify this step then enter the command line to start msfconsole. <code class="language-plaintext highlighter-rouge">* Remember you will need to enter you password for sudo</code></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre> sudo /opt/metasploit-framework/bin/msfconsole
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-7.png" alt="Section2" /></p>
+  </li>
+  <li>I added another I con use to stop the msfdb after you are done with Metasploit. For this you will aldo need a <code class="language-plaintext highlighter-rouge">Multi Action</code> and add the fallowing functionality.
+    <ol>
+      <li>System: Open</li>
+      <li>System: Text
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-8.png" alt="Section2" /></li>
+    </ol>
+  </li>
+  <li>
+    <p>On the System: Option select the terminal application to open. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-9.png" alt="Section2" /></p>
+  </li>
+  <li>
+    <p>On the first System: Text enter the title you want to use to identify this step then enter the command line to stop the database.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>/opt/metasploit-framework/bin/msfdb stop
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-10.png" alt="Section2" /></p>
+  </li>
+  <li>
+    <p>Last step change your icons to one you want if you want to use the icon I have you can save it from this post as png.</p>
+
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-11-1.png" alt="Section2" /></p>
+
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-11-2.png" alt="Section2" /></p>
+
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/metasploit-Stream-Deck-11-3.png" alt="Section2" /></p>
+
+    <ul>
+      <li>icon</li>
+    </ul>
+
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/msfconsole.png" alt="Section2" /></p>
+  </li>
+</ol>
+
+<p><a href="#Top">Top</a></p>
+
+<p><a id="openTools"></a></p>
+
+<h2 id="how-to-open-burp-and-other-tools-with-stream-deck">How to open Burp and other tools with Stream Deck</h2>
+
+<p>The following steps will show you how to add Burp and other software to Elgato Stream Deck.</p>
+
+<ol>
+  <li>
+    <p>Open the Elgato Stream Deck software and search for <code class="language-plaintext highlighter-rouge">Open</code> on the right search bar and drag to one of the empty fiels. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/openApplications-1.png" alt="Section3" /></p>
+  </li>
+  <li>
+    <p>Click on the Icon on the middle windows and on the options bellow click on <code class="language-plaintext highlighter-rouge">Choose</code> then select the app you want to run with that click. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/openApplications-2.png" alt="Section3" /></p>
+  </li>
+  <li>
+    <p>Last test the new icon and recreate any of the steps with as many apps as you want too add to the stream deck. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/openApplications-3.png" alt="Section3" /></p>
+  </li>
+</ol>
+
+<p><a href="#Top">Top</a></p>
+
+<p><a id="Add2StreamDeck"></a></p>
+
+<h2 id="how-to-add-automation-script-to-elgato-stream-deck">How to Add Automation script to Elgato Stream Deck.</h2>
+
+<p>The following steps will show you how to add Automator scripts to Elgato Stream Deck.</p>
+
+<ol>
+  <li>
+    <p>Open the Elgato Stream Deck software and search for <code class="language-plaintext highlighter-rouge">open</code> on the right search bar. 
+ <img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Stream-Deck-Software-Open.png" alt="SectionLast" /></p>
+
+    <p><img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Stream-Deck-Software-Search-For-Open.png" alt="SectionLast" /></p>
+  </li>
+  <li>
+    <p>Drag the open icon on the Stream Deck software to an empty window. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Stream-Deck-Software-MoveOpen-To-Window.png" alt="SectionLast" /></p>
+  </li>
+  <li>
+    <p>Click on the icon on the middle window, enter your title, click <code class="language-plaintext highlighter-rouge">choose</code>, and select the application you want to run when clicking on the Stream Deck. 
+<img src="/blog-assets/Elgato-StreamDeck-For-Productivity/Stream-Deck-Software-Select-Application.png" alt="SectionLast" /></p>
+  </li>
+  <li>
+    <p>I recommend creating a folder with your Icons and logos you might want to use for the icon. Remember to try different sizes to get a good result on the Stream Deck. This is how I have my icons organized. Remember, the icon might not look fine, so you might need to try a different resolution on the Stream Deck to make it look correct.</p>
+  </li>
+</ol>
+
+<p><a href="#Top">Top</a></p>
+
+<h4 id="reference">Reference:</h4>
+
+<p>https://winaero.com/run-google-chrome-with-different-profiles/
+https://peter.sh/experiments/chromium-command-line-switches/</p>
+
+:ET

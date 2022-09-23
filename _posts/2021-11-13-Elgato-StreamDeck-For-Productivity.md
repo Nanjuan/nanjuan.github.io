@@ -39,7 +39,7 @@ Some prerequisites to keep in mind if you planning to follow this tutorial. I am
 The following step will help you create the necessary Automator scripts to open different chrome windows with other accounts from your computer. 
 
 1. Open the `Automator` program and click `New Document` if prompt. Then select application and click choose. 
-![Section1](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-App-Open-Click-App.png)
+![Section1](/assets/img/Elgato-StreamDeck-For-Productivity/Automation-App-Open-Click-App.png)
 
 2. Search on the left upper search bar for `Run Shell Script` and drag that actions to the right window. 
 ![Section12](/blog-assets/Elgato-StreamDeck-For-Productivity/Automation-Run-Shell-Script-on-Right.png)

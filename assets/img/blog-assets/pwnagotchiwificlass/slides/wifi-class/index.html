@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pwnagotchi WiFi Class</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+        @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+        body {
+            font-family: 'Droid Serif';
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Yanone Kaffeesatz';
+            font-weight: normal;
+        }
+
+        .remark-code,
+        .remark-inline-code {
+            font-family: 'Ubuntu Mono';
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+
+class: center, middle
+
+# Pwnagotchi
+#### Here is where your presentation begins I guess
+
+
+
+[Home Page](/index.html)
+
+
+---
+
+# Disclaimers
+
+1. The opinions expressed in this presentation and on the following slides are solely those of the presenter (N3S) and not necessarily those of his employer and anyone other than myself(N3S).
+2. The information here is for educational purposes and all the information here was found online for free on the open web. 
+3. Use anything you learn here only if you have full permission or you own your equipment. 
+
+
+---
+
+# About Pwnagotchi
+
+Pwnagotchi is an A2C-based “AI” powered by bettercap and running on a Raspberry Pi Zero W that learns from its surrounding WiFi environment in order to maximize the crackable WPA key material it captures (either through passive sniffing or by performing deauthentication and association attacks). This material is collected on disk as PCAP files containing any form of handshake supported by hashcat, including full and half WPA handshakes as well as PMKIDs.
+
+[Source]: https://pwnagotchi.ai/
+
+
+???
+how to insert image
+      It's possible to embed images.
+![](https://cdn.shopify.com/s/files/1/0051/4802/products/mona-1_large.jpg?v=1511308586)
+
+---
+class: center, middle
+
+# Lets start Building your pwnagotchi
+
+---
+
+# Soldering Header
+
+![very good|512x397](./assets/headerSoldering2.png)
+
+
+---
+
+# Putting Kit Together
+![](./assets/pwnagotchiBuild12.png)
+
+
+---
+
+# Program your SD card with pwnagotchi OS
+For this step you will need to download the pwnagotchi img file and the etcher software to burn the img to the micro SD cards. 
+* [Etcher](https://www.balena.io/etcher/)
+* [OS](https://github.com/evilsocket/pwnagotchi/releases)
+
+???
+![images here]()
+
+
+---
+
+# First Boot
+
+This first book will take a while so be patience grab a drink the only thing you can’t do is unplug you Pwnagotchi or it will die!!!!
+
+:-)
+
+IF the first boot fail and you dont get a screen or is not fully booting go ahead and re-image your micro sd card. 
+
+---
+
+# Connect your Pwnagotchi to PC other ethernet
+
+Connect your Data-USB cable to the micro usb toward the center of the Raspberry. 
+
+setup your ethernet adapter to 
+```
+ip address: 10.0.0.1
+subnet mask:255.255.255.0
+default gateway: 10.0.0.1
+if require add a DNS
+```
+After that make sure you can ping 10.0.0.2
+
+To SSH and enter the portal used
+```
+ssh pi@10.0.0.2
+10.0.0.2:8080
+```
+
+---
+class: center, middle
+
+# Pwnagotchi Config File
+
+## Setting File Location 
+### /etc/pwnagotchi/config.yml
+
+---
+
+```
+main:
+  name: '{Device name HERE}'
+  whitelist:
+    - 'The Undercroft'
+    - 'The Undercroft Guest'
+plugins:
+    memtemp:
+      enabled: true
+    bt-tether:
+      enabled: true
+      devices:
+        iPhone:
+          enabled: true
+          search_order: 1
+          mac: '{insert here}'
+          ip: '172.20.10.6'
+          netmask: 24
+          interval: 1
+          scantime: 15
+          share_internet: true
+          priority: 99
+          max_tries: 0
+    ui:
+        display:
+            enabled: true
+            type: 'waveshare_2'
+            color: 'black'
+        web:
+            username: {Enter username here}
+            password: {enter password Here} 
+        
+
+```
+
+---
+
+class: center, middle
+
+# Basic WiFi Class
+
+---
+
+## What is passive sniffing on WiFi? (this example is network hardware based but is the same for WiFi)
+
+This kind of sniffing occurs at the hub. A hub is a device that received the traffic on one port and then retransmits that traffic on all other ports. It does not take into account that the traffic is not meant for other destinations. In this case, if a sniffer device is placed at the hub then all the network traffic can be directly captured by the sniffer. The sniffer can sit there undetected for a long time and spy on the network. Since hubs are not used these days much, this kind of attack will be an old-school trick to perform. Hubs are being replaced by switches and that is where active sniffing comes into the picture.
+
+* [Source](https://www.greycampus.com/blog/information-security/what-is-a-sniffing-attack-and-how-can-you-defend-it)
+
+---
+
+## What is WiFi Deauthentication?
+
+Unlike most radio jammers, deauthentication acts in a unique way. The IEEE 802.11 (Wi-Fi) protocol contains the provision for a deauthentication frame. Sending the frame from the access point to a station is called a "sanctioned” technique, to inform a rogue station that have been disconnected from the network".
+
+An attacker can send a deauthentication frame at any time to a wireless access point with a spoofed address for the victim. The protocol does not require any encryption for this frame, even when the session was established with Wired Equivalent Privacy (WEP) for data privacy. The attacker only needs to know the victim's MAC address, which is available in the clear through wireless network sniffing.
+
+* [Source](https://en.wikipedia.org/wiki/Wi-Fi_deauthentication_attack)
+
+---
+
+## What is a WiFi PCAP files on Pwnagotchi?
+
+All the handshakes captured by your Pwnagotchi are saved into .pcap files on its filesystem. Each PCAP file that Pwnagotchi generates, is organized according to access point. One PCAP will contain all the handshakes that Pwnagotchi has ever captured for that particular AP and this pcap is what is going to be used to hack the WiFi password. 
+
+* [Source](https://pwnagotchi.ai/)
+
+---
+
+# Capturing and Cracking your first handshake
+
+To capture you first handshake just leave the Pwnagotchi power on and wait for the SSID of the WiFi you trying to capture the handshake shows on the Pwnagotchi screen. Remember only do this to your devices or devices you have full written permission.
+
+---
+
+## Cracking your handshake
+
+```
+Aircrack-ng <file.pcap> -j ./<output.name.hccapx>
+Hccap2john <file.hccapx> > ./<output.name>
+John --wordlist=<directory to world list> ./<output.name> 
+
+```
+First step is ot used Aircrack-ng input the pcap from the pwnagotchi this will output a file with the extension .hccapx.
+
+Second step used hccap2john to convert the hccapx file from aircrack-ng to john file which does not have a extension and that is ok. 
+
+Third step is to use your favorite wordlist to the output file from hccap2john with John to crack your password. Keep in mind the bigger your wordlist the longest it will take on your regular computer. 
+
+???
+insert image 
+---
+class: center, middle
+# Thanks
+Do you have any questions?
+Ask me or google it!!
+
+nestor@nntorres.com  
+nanjuantech.com
+
+[Home Page](/index.html)
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        var slideshow = remark.create();
+    </script>
+</body>
+
+</html>
