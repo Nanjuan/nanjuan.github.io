@@ -19,7 +19,7 @@ description: This repo is where I'll be posting my Snyk automation scripts that 
 4. [getOrgList](#getOrgList)
 
 ## Summary <a id="Summary"></a> 
-This repo is where I'll be posting my Snyk automation scripts that can be used to automate tasks inside Snyk. These scripts are for the enterprise version of Snyk not the free version for now.
+Welcome to the exciting world of Snyk automation! As a passionate advocate for efficient cybersecurity practices, I am thrilled to introduce my latest project - a dedicated repository of Snyk automation scripts tailored for enterprise environments. Snyk, as many of you might know, is a powerful tool that helps identify and fix vulnerabilities in code and dependencies. While it offers incredible out-of-the-box features, I believe that automation can significantly enhance its capabilities, especially in complex enterprise settings. In this blog, we will delve into the nuances of these scripts. Join me as we embark on this journey to make cybersecurity more efficient and robust with the power of automation!
 
 [Top](#Top)
 
